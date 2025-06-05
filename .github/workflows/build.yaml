@@ -1,16 +1,16 @@
 name: OpenTelemetry Distribution Build
 
 on:
-   push:
-     tags:
-       - "v*"
-   workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
 
-  permissions:
-    contents: write # This is required for creating/modifying releases
+permissions:
+  contents: write # This is required for creating/modifying releases
 
-  jobs:
-    build:
+jobs:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
